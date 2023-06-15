@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Кулинарный сайт "CookOld"</title>
+	<link rel="icon" href="assets/logo.png" type="image/png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+		integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
+		integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		h1,
+		h2,
+		h3,
+		h4,
+		h5 {
+			font-size: 3em;
+			font-family: Arial, Helvetica, sans-serif;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		}
+
+		h4,
+		h5 {
+			font-size: 1em;
+		}
+
+		ol {
+			position: absolute;
+			top: 10%;
+			font-size: 22px;
+			font-family: Arial, sans-serif;
+			color: white;
+			text-align: left;
+			z-index: 9999;
+			width: 30%;
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+		}
+
+		.section {
+			text-align: center;
+			overflow: hidden;
+		}
+
+		#myVideo {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			background-position: center center;
+			background-size: contain;
+			object-fit: cover;
+			z-index: 3;
+		}
+
+		#section0 .layer {
+			position: absolute;
+			z-index: 4;
+			width: 100%;
+			left: 0;
+			top: 43%;
+			transform: translate3d(0, 0, 0);
+		}
+
+		#section0 {
+			overflow: hidden;
+		}
+
+		#infoMenu li a {
+			color: #fff;
+		}
+
+		video::-webkit-media-controls {
+			display: none !important;
+		}
+
+		button {
+			align-items: center;
+			appearance: none;
+			background-color: #FCFCFD;
+			border-radius: 4px;
+			border-width: 0;
+			box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+			box-sizing: border-box;
+			color: #36395A;
+			cursor: pointer;
+			display: inline-flex;
+			height: 48px;
+			justify-content: center;
+			line-height: 1;
+			list-style: none;
+			overflow: hidden;
+			padding-left: 16px;
+			padding-right: 16px;
+			position: relative;
+			text-align: left;
+			text-decoration: none;
+			transition: box-shadow .15s, transform .15s;
+			user-select: none;
+			-webkit-user-select: none;
+			touch-action: manipulation;
+			white-space: nowrap;
+			will-change: box-shadow, transform;
+			font-size: 18px;
+		}
+
+		button:focus {
+			box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+		}
+
+		button:hover {
+			box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+			transform: translateY(-2px);
+		}
+
+		button:active {
+			box-shadow: #D6D6E7 0 3px 7px inset;
+			transform: translateY(2px);
+		}
+	</style>
+</head>
+
+<body>
+	<div id="fullpage">
+		<div class="section">
+			<video id="myVideo" loop muted playsinline data-autoplay>
+				<source src="assets/1.mp4" type="video/mp4">
+			</video>
+			<h1 style="position: relative; z-index: 999;">Кулинарный сайт "CookOld"</h1>
+			<h3 style="position: relative; z-index: 999;">Пролистните вниз ради различных рецептов</h3>
+		</div>
+
+		<div class="section">
+			<video id="myVideo" loop muted playsinline data-autoplay>
+				<source src="assets/2.mp4" type="video/mp4">
+			</video>
+			<h2 style="position: absolute; top: 0; z-index: 9999; margin:5px 0px 0px 20px;">Как приготовить чипсы</h2>
+			<br>
+			<button style="position: absolute; z-index: 9999; top: 75px; left: 25px"
+				onclick="toggleText()">Показать</button>
+			<ol id="demo" style="display: none;">
+				<li>Картофель очистить, вымыть и нарезать очень тонкими слайсами (кружочками) толщиной около 2 мм. </li>
+				<br>
+				<li>Нарезанный картофель выложить в миску и залить на 2-3 минуты холодной водой. Это нужно для того, чтобы
+					вымыть лишний крахмал. Воду слить, а картофель выложить на вафельное полотенце, просушить.</li>
+				<br>
+				<li>Картофельные слайсы выложить в миску, добавить соль, сладкую молотую паприку и растительное масло,
+					хорошо перемешать. Приправы в данном блюде можно использовать разные, на ваш вкус.</li>
+				<br>
+				<li>Противень для запекания застелить пергаментной бумагой. Выложить картофель в один слой. Накрыть вторым
+					листом пергамента, чтобы чипсы во время запекания не подгорели. Запекать картофельные чипсы в разогретой
+					до 180 градусов духовке 20 мин</li>
+				<br>
+				<li>Картофельные чипсы, приготовленные в духовке, остудить, выложить в миску и можно подавать на стол.
+					Аппетитные, хрустящие чипсы очень вкусно подавать с кетчупом.</li>
+			</ol>
+		</div>
+
+		<div class="section">
+			<video id="myVideo" loop muted playsinline data-autoplay>
+				<source src="assets/3.webm" type="video/webm">
+			</video>
+			<h2 style="position: absolute; top: 0; z-index: 9999; margin: 5px 0px 0px 20px;">Как приготовить гамбургер
+			</h2>
+			<button style="position: absolute; z-index: 9999; top: 75px; left: 25px"
+				onclick="toggleText2()">Показать</button>
+			<br>
+			<ol id="demo2" style="display: none;">
+				<li>
+					В мясной фарш добавляем соль и перец по вкусу, хорошо вымешиваем. Формируем шарик, расплющиваем его в
+					руках, чтобы получилась плоская котлета. Надавливаем большим пальцем в центр котлеты, чтобы она не
+					вздулась во время обжаривания.</li>
+				<br>
+				<li>Обжариваем котлету 4-5 минут с каждой стороны.
+					На готовую котлету кладем тонкий кусочек сыра.</li>
+				<br>
+				<li>Помидоры нарезаем кружочками, твердый сыр - тонкими пластинами, соленый огурец - тонкими кружочками.
+					В отдельной емкости смешиваем майонез и кетчуп.</li>
+				<br>
+				<li>Булочку разрезаем пополам и смазываем соусом из майонеза и кетчупа. Выкладываем на соус порванный руками
+					листья салата (капусты)
+					На салат кладем нарезанный тонкими колечками лук. На лук выкладываем кружочек помидора. На кружочек
+					помидора выкладываем котлету.</li>
+				<br>
+				<li>
+					На котлету выкладываем пару ломтиков соленого огурца и ломтик сыра.</li>
+				<br>
+				<li>Накрываем бургер второй частью булочки. По такому же принципу формируем остальные бургеры.</li>
+			</ol>
+		</div>
+
+		<div class="section">
+			<video id="myVideo" loop muted playsinline data-autoplay>
+				<source src="assets/4.mp4" type="video/mp4">
+			</video>
+			<h2 style="position: absolute; top: 0; z-index: 9999; margin:5px 0px 0px 20px;">Как приготовить курицу из KFC
+			</h2>
+			<button style="position: absolute; z-index: 9999; top: 75px; left: 25px"
+				onclick="toggleText3()">Показать</button>
+			<br>
+			<ol id="demo3" style="display: none;">
+				<li>
+					Куриные крылышки и грудку разрезают на три части, чтобы они хорошо прожарились, и укладывают в глубокую
+					посуду. Добавляют соль, приправу к курице, паприку и черный перец, и все хорошо перемешивают. Оставляют
+					мариноваться примерно на 30-40 минут. Кукурузные хлопья без добавок измельчают при помощи скалки или
+					толкушки, и смешивают с панировочной смесью или сухарями мелкого помола. Яйца слегка взбивают в отдельной
+					посуде.
+				</li>
+				<br>
+				<li>Когда курица хорошо промариновалась, кусочки филе и крылья обваливают в муке, потом во взбитых яйцах и
+					кукурузных хлопьях с сухарями. Получается тройная панировка, которая надежно удерживает влагу внутри
+					мяса, благодаря чему курица получается нежной и невероятно сочной. Подготовленные кусочки домашней курицы
+					KFC опускают в разогретое масло (фритюр) и равномерно обжаривают с двух сторон до образования золотистой
+					румяной корочки.
+				</li>
+				<br>
+				<li>Глубокую тарелку застилают салфеткой, которая заберет лишний жир с жареной курицы, и выкладывают
+					аппетитные крылышки горкой. В качестве гарнира рекомендуется подавать картофель фри или картофель
+					по-деревенски. Также можно использовать пикантный соус для остроты вкуса.
+				</li>
+
+			</ol>
+		</div>
+
+		<div class="section">
+			<video id="myVideo" muted playsinline data-autoplay>
+				<source src="assets/5.mp4" type="video/mp4">
+			</video>
+			<h2 style="position: absolute; z-index: 9999; top: 0">Авторы: <br> Немтин Алексей <br> Нестеренко Илья</h2>
+		</div>
+
+		<script>
+			let myFullpage = new fullpage('#fullpage', {
+				autoScrolling: true,
+				navigation: true,
+				showActiveTooltip: true,
+				scrollHorizontally: true,
+				navigationTooltips: ['Главная страница', 'Чипсы', 'Гамбургер', 'Курица', 'Конец']
+			});
+
+			function toggleText() {
+				let text = document.querySelector("#demo")
+				if (text.style.display === "none") {
+					text.style.display = "block";
+				} else {
+					text.style.display = "none";
+				}
+			}
+
+			function toggleText2() {
+				let text = document.querySelector("#demo2")
+				if (text.style.display === "none") {
+					text.style.display = "block";
+				} else {
+					text.style.display = "none";
+				}
+			}
+
+			function toggleText3() {
+				let text = document.querySelector("#demo3")
+				if (text.style.display === "none") {
+					text.style.display = "block";
+				} else {
+					text.style.display = "none";
+				}
+			}
+		</script>
+</body>
+
+</html>
