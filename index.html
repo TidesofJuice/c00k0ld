@@ -8,6 +8,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
 		integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.extensions.min.js"
+		integrity="sha512-i0+IGP2OBJG5Lioj9FaBr30x7Ci39dWQb8BhSd8J86p48OgctpfXXq0hG6cmCbCkKh4tn335pz9b3seChGFdKw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
 		integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -132,15 +135,17 @@
 <body>
 	<div id="fullpage">
 		<div class="section">
-			<video id="myVideo" loop muted playsinline data-autoplay>
+			<video id="myVideo" loop playsinline preload data-autoplay>
 				<source src="assets/1.mp4" type="video/mp4">
 			</video>
 			<h1 style="position: relative; z-index: 999;">Кулинарный сайт "CookOld"</h1>
 			<h3 style="position: relative; z-index: 999;">Пролистните вниз ради различных рецептов</h3>
+			<input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1"
+				style="z-index: 9999; position: absolute; top: 0;">
 		</div>
 
 		<div class="section">
-			<video id="myVideo" loop muted playsinline data-autoplay>
+			<video id="myVideo" loop playsinline preload autoplay>
 				<source src="assets/2.mp4" type="video/mp4">
 			</video>
 			<h2 style="position: absolute; top: 0; z-index: 9999; margin:5px 0px 0px 20px;">Как приготовить чипсы</h2>
@@ -166,7 +171,7 @@
 		</div>
 
 		<div class="section">
-			<video id="myVideo" loop muted playsinline data-autoplay>
+			<video id="myVideo" loop playsinline preload data-autoplay>
 				<source src="assets/3.webm" type="video/webm">
 			</video>
 			<h2 style="position: absolute; top: 0; z-index: 9999; margin: 5px 0px 0px 20px;">Как приготовить гамбургер
@@ -199,7 +204,7 @@
 		</div>
 
 		<div class="section">
-			<video id="myVideo" loop muted playsinline data-autoplay>
+			<video id="myVideo" loop playsinline preload data-autoplay>
 				<source src="assets/4.mp4" type="video/mp4">
 			</video>
 			<h2 style="position: absolute; top: 0; z-index: 9999; margin:5px 0px 0px 20px;">Как приготовить курицу из KFC
@@ -232,7 +237,7 @@
 		</div>
 
 		<div class="section">
-			<video id="myVideo" muted playsinline data-autoplay>
+			<video id="myVideo" playsinline preload data-autoplay>
 				<source src="assets/5.mp4" type="video/mp4">
 			</video>
 			<h2 style="position: absolute; z-index: 9999; top: 0">Авторы: <br> Немтин Алексей <br> Нестеренко Илья</h2>
@@ -273,6 +278,15 @@
 					text.style.display = "none";
 				}
 			}
+
+			let volumeSlider = document.getElementById('volumeSlider');
+			let videos = document.getElementsByTagName('video');
+			volumeSlider.addEventListener('input', function () {
+				for (let i = 0; i < videos.length; i++) {
+					videos[i].volume = volumeSlider.value;
+				}
+			});
+
 		</script>
 </body>
 
